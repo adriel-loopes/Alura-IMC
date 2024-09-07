@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define o documento como HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Configura a codificação de caracteres como UTF-8 (suporta caracteres especiais) -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz com que a página seja responsiva, ajustando a largura para o dispositivo do usuário -->
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Garante que a página seja renderizada com a melhor compatibilidade nos navegadores -->
+    
+    <title>Calculadora de IMC</title>
+    <!-- Define o título da página que será exibido na aba do navegador -->
+    
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importa o arquivo CSS externo para estilização da página -->
+</head>
+
+<body id="corpoPrincipal">
+    <!-- O corpo da página, onde o conteúdo visível será exibido -->
+    
+    <div id="fundoDoCorpo">
+        <!-- Um contêiner principal para agrupar o conteúdo da calculadora de IMC -->
+        
+        <h1 class="titulo-principal">Calculadora de IMC</h1>
+        <!-- Título principal da página que descreve a função da página -->
+
+        <form id="imcForm" class="formulario">
+            <!-- Formulário que coleta os dados do usuário (altura e peso) -->
+            
+            <div class="campo-input">
+                <label for="altura" class="labelAlturaLargura">Altura (m):</label>
+                <!-- Rótulo para o campo de entrada de altura -->
+                
+                <input type="number" id="altura" class="entradaDeDados" step="0.01" placeholder="Ex: 1.75" required>
+                <!-- Campo de entrada para o usuário inserir sua altura (formato numérico, com dois decimais) -->
+            </div>
+
+            <div class="campoEntrada">
+                <label for="peso" class="labelAlturaLargura">Peso (kg):</label>
+                <!-- Rótulo para o campo de entrada de peso -->
+                
+                <input type="number" id="peso" class="entradaDeDados" placeholder="Ex: 70" required>
+                <!-- Campo de entrada para o usuário inserir seu peso (formato numérico) -->
+            </div>
+            
+
+            <button type="submit" id="calcularBtn" class="botaoCalcular">Calcular IMC</button>
+            <!-- Botão de envio do formulário, que quando clicado aciona o cálculo do IMC -->
+        </form>
+
+        <div id="resultadoIMC"></div>
+        <!-- Área onde o resultado do cálculo do IMC será exibido após o cálculo -->
+
+        <div id="imagemResultado" class="imagem-container"></div>
+        <!-- Contêiner onde a imagem correspondente ao resultado do IMC (abaixo do peso, normal ou acima do peso) será exibida -->
+    
+
+    <footer class="direitosReservados">
+        <!-- Rodapé da página -->
+        
+        <p>&copy; 2024 Criado por Adriel Lopes, imersão Dev com Alura e Google Gemini</p>
+        <!-- Texto do rodapé com direitos autorais, que você pode personalizar com seu nome -->
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Importa o arquivo JavaScript externo, que contém a lógica do cálculo do IMC -->
+</body>
+</html>
