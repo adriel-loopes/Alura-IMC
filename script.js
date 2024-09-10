@@ -18,14 +18,20 @@ document.getElementById('imcForm').addEventListener('submit', function(event) {
 
     // Determina a faixa do IMC e a imagem a ser exibida
     if (imc < 18.5) {
-        resultado = 'Abaixo do peso'; // Se o IMC for menor que 18.5, exibe "Abaixo do peso"
-        imagem = 'images/madruga.png'; // Caminho da imagem para quando o IMC for abaixo do peso
+        // Se o IMC for menor que 18.5, exibe "Abaixo do peso"
+        // Caminho da imagem para quando o IMC for abaixo do peso
+        // Altera a cor do texto para laranja
+        resultado = 'Abaixo do peso', imagem = 'images/madruga.png', document.getElementById('resultadoIMC').style.color = 'orange'; 
     } else if (imc >= 18.5 && imc < 24.9) {
-        resultado = 'Peso normal'; // Se o IMC estiver entre 18.5 e 24.9, exibe "Peso normal"
-        imagem = 'images/chaves.png'; // Caminho da imagem para quando o IMC for normal
+        // Se o IMC estiver entre 18.5 e 24.9, exibe "Peso normal"
+        // Caminho da imagem para quando o IMC for normal
+        // Altera a cor do texto para azul
+        imagem = 'images/chaves.png', resultado = 'Peso normal', document.getElementById('resultadoIMC').style.color = 'blue'; 
     } else {
-        resultado = 'Acima do peso'; // Se o IMC for maior ou igual a 25, exibe "Acima do peso"
-        imagem = 'images/barriga.png'; // Caminho da imagem para quando o IMC for acima do peso
+        // Se o IMC estiver igual ou maior que 24.9, exibe "Acima do peso"
+        // Caminho da imagem para quando o IMC for Acima do peso
+        // Altera a cor do texto para vermelho
+        resultado = 'Acima do peso !!!', imagem = 'images/barriga.png', document.getElementById('resultadoIMC').style.color = 'red';
     }
 
     // Exibe o resultado e a imagem na página

@@ -15,20 +15,20 @@
     flex-direction: column; /* Alinha os elementos em uma coluna vertical */
     align-items: center; /* Centraliza os elementos horizontalmente */
     height: 100vh; /* Define a altura do corpo como 100% da altura da tela */
+    width: 100%; /* Define a largura como 100% da janela */
     margin: 0; /* Remove a margem do body */
     min-height: 100vh; /* Garante que o body ocupe no mínimo a altura total da janela */
-    margin-top: 100px; /* Adiciona um espaçamento superior de 100px */
+    margin-top: 50px; /* Adiciona um espaçamento superior de 50px */
     position: relative; /* Permite o uso de posicionamento absoluto nos filhos do body */
-    width: 100%; /* Define a largura como 100% da janela */
     max-width: center; /* Incorreto, pois 'center' não é uma unidade válida; aqui deveria estar algo como `100%` */
     padding: 0; /* Remove qualquer espaçamento interno */
 }
 
 #fundoDoCorpo {
-    background: #fff; /* Define o fundo branco para o contêiner principal */
-    /* background-image:url('images/flocospreto.gif'); Comentei porque esta linha definiria uma imagem de fundo */
+    background: #fff; /* images/flocospreto.gifDefine o fundo branco para o contêiner principal */
+    background-image:url(''); /*Comentei porque esta linha definiria uma imagem de fundo*/
     transition: background-color 10.8s ease; /* Adiciona uma transição suave na mudança da cor de fundo */
-    padding: 20px; /* Adiciona espaçamento interno de 20px */
+    padding: 10px; /* Adiciona espaçamento interno de 20px */
     border-radius: 10px; /* Define bordas arredondadas de 10px */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao redor do contêiner */
     text-align: center; /* Centraliza o texto dentro do contêiner */
@@ -47,6 +47,7 @@
     font-size: 16px; /* Define o tamanho da fonte como 16px */
     margin-bottom: 15px; /* Adiciona um espaçamento inferior de 15px */
     color: #555; /* Define a cor do texto para um cinza médio */
+    font-weight: bold; /* Define o texto em negrito */
 }
 
 .formulario .campoEntrada {
@@ -72,7 +73,7 @@
 .botaoCalcular {
     background-color: #ff69b4; /* Define a cor de fundo do botão como rosa forte */
     color: white; /* Define a cor do texto como branca */
-    padding: 10px; /* Adiciona preenchimento de 10px */
+    padding: 10px; /* Adiciona preenchimento de 10px no botão*/
     border: none; /* Remove a borda ao redor do botão */
     border-radius: 5px; /* Define bordas arredondadas de 5px */
     width: 100%; /* Faz o botão ocupar toda a largura disponível */
@@ -86,10 +87,24 @@
 }
 
 #resultadoIMC {
-    margin-top: 50px; /* Adiciona um espaçamento superior de 50px */
+    margin-top: 20px; /* Adiciona um espaçamento superior de 20px */
     font-size: 18px; /* Define o tamanho da fonte como 18px */
     color: #333; /* Define a cor do texto como cinza escuro */
     padding: 2px; /* Adiciona um pequeno preenchimento interno */
+    font-weight: bold; /* Define o texto em negrito */
+    animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 .imagem-container {
@@ -101,7 +116,7 @@
     height: auto; /* Ajusta a altura automaticamente para manter a proporção */
     border-radius: 5px; /* Define bordas arredondadas de 5px para a imagem */
     justify-content: center; /* Centraliza o conteúdo da imagem */
-    width: 300px; /* Define a largura da imagem como 300px */
+    width: 200px; /* Define a largura da imagem como 200px */
     margin-left: center; /* Inválido; o correto seria usar `margin-left: auto; margin-right: auto;` para centralizar */
 }
 
