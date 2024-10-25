@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingressimc
+  namespace: adriel
+  labels:
+    name: ingressimc
+spec:
+  ingressClassName: nginx
+  tls: 
+  - hosts:
+    - imc.lab.havan.com.br
+    secretName: havan-default-tls
+  rules:
+  - host: imc.lab.havan.com.br
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: serviceimc
+            port: 
+              number: 3000
+

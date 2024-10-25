@@ -31,7 +31,7 @@ document.getElementById('imcForm').addEventListener('submit', function(event) {
         // Se o IMC estiver igual ou maior que 24.9, exibe "Acima do peso"
         // Caminho da imagem para quando o IMC for Acima do peso
         // Altera a cor do texto para vermelho
-        resultado = 'Acima do peso !!!   🚨', imagem = 'images/barriga.png', document.getElementById('resultadoIMC').style.color = 'red';
+        resultado = 'Acima do peso !!!   🚨', imagem = 'images/madruga.png', document.getElementById('resultadoIMC').style.color = 'red';
     }
 
     // Exibe o resultado e a imagem na página

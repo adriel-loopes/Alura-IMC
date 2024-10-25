@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployimc
+  namespace: adriel
+spec:
+  selector:
+    matchLabels:
+      app: deployimc
+  template:
+    metadata:
+      labels:
+        app: deployimc
+    spec:
+      containers:
+      - name: deployimc
+        image: registry.tools.havan.com.br/devops/library/my-imc:1.0.0.1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
